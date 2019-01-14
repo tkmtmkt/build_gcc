@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=7.1.0
+VERSION=7.2.0
 TARGET=gcc-${VERSION}
 
 # download
-ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.bz2
-DOWNLOAD_URL=https://bigsearcher.com/mirrors/gcc/releases/${TARGET}/${TARGET}.tar.bz2
+ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.xz
+DOWNLOAD_URL=https://bigsearcher.com/mirrors/gcc/releases/${TARGET}/${TARGET}.tar.xz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL ${DOWNLOAD_URL} -o ${ARCHIVE}
 
 pushd ${BUILD_DIR}
