@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=4.9.2
+VERSION=4.9.3
 TARGET=gcc-${VERSION}
 
 # download
