@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.8.1
+VERSION=1.0.3
 TARGET=mpc-${VERSION}
 
 # download
