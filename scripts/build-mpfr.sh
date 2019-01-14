@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=2.4.2
+VERSION=3.1.4
 TARGET=mpfr-${VERSION}
 
 # download
