@@ -7,9 +7,9 @@ services:
     tty: true
     volumes:
       - './centos6/home/:/home/:rw'
-      - './centos6/opt/gcc-4.9.3/:/opt/gcc-4.9.3/:rw'
-      - '../scripts/:/opt/gcc-4.9.3/workspace/scripts/:rw'
-      - '../archives/:/opt/gcc-4.9.3/workspace/archives/:rw'
+      - './centos6/opt/gcc-4.9.4/:/opt/gcc-4.9.4/:rw'
+      - '../scripts/:/opt/gcc-4.9.4/workspace/scripts/:rw'
+      - '../archives/:/opt/gcc-4.9.4/workspace/archives/:rw'
   ubuntu1404:
     image: ubuntu_gcc:14.04
     build: ./ubuntu1404
@@ -17,6 +17,6 @@ services:
     tty: true
     volumes:
       - './ubuntu1404/home/:/home/:rw'
-      - './ubuntu1404/opt/gcc-4.9.3/:/opt/gcc-4.9.3/:rw'
-      - '../scripts/:/opt/gcc-4.9.3/workspace/scripts/:rw'
-      - '../archives/:/opt/gcc-4.9.3/workspace/archives/:rw'
+      - './ubuntu1404/opt/gcc-4.9.4/:/opt/gcc-4.9.4/:rw'
+      - '../scripts/:/opt/gcc-4.9.4/workspace/scripts/:rw'
+      - '../archives/:/opt/gcc-4.9.4/workspace/archives/:rw'
