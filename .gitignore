@@ -1,0 +1,6 @@
+archives/
+build/
+log/
+docker/*/home/
+docker/*/opt/
+*.log

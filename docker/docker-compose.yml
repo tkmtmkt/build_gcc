@@ -1,0 +1,22 @@
+version: '2'
+services:
+  centos6:
+    image: centos_gcc:6
+    build: ./centos6
+    hostname: centos6
+    tty: true
+    volumes:
+      - './centos6/home/:/home/:rw'
+      - './centos6/opt/gcc-4.8.3/:/opt/gcc-4.8.3/:rw'
+      - '../scripts/:/opt/gcc-4.8.3/workspace/scripts/:rw'
+      - '../archives/:/opt/gcc-4.8.3/workspace/archives/:rw'
+  ubuntu1404:
+    image: ubuntu_gcc:14.04
+    build: ./ubuntu1404
+    hostname: ubuntu1404
+    tty: true
+    volumes:
+      - './ubuntu1404/home/:/home/:rw'
+      - './ubuntu1404/opt/gcc-4.8.3/:/opt/gcc-4.8.3/:rw'
+      - '../scripts/:/opt/gcc-4.8.3/workspace/scripts/:rw'
+      - '../archives/:/opt/gcc-4.8.3/workspace/archives/:rw'
