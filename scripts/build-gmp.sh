@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=4.3.2
+VERSION=6.1.0
 TARGET=gmp-${VERSION}
 
 # download
