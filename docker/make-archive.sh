@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 
-TARGET=gcc-6.2.0
+TARGET=gcc-6.3.0
 
 case "$1" in
   centos6|ubuntu1404)
