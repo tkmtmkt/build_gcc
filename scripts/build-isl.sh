@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-VERSION=0.12.2
+VERSION=0.14
 TARGET=isl-${VERSION}
 
 # download
