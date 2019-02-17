@@ -10,13 +10,13 @@ services:
       - './centos6/opt/gcc-8.2.0/:/opt/gcc-8.2.0/:rw'
       - '../scripts/:/opt/gcc-8.2.0/workspace/scripts/:rw'
       - '../archives/:/opt/gcc-8.2.0/workspace/archives/:rw'
-  ubuntu1404:
-    image: ubuntu_gcc:14.04
-    build: ./ubuntu1404
-    hostname: ubuntu1404
+  ubuntu1604:
+    image: ubuntu_gcc:16.04
+    build: ./ubuntu1604
+    hostname: ubuntu1604
     tty: true
     volumes:
-      - './ubuntu1404/home/:/home/:rw'
-      - './ubuntu1404/opt/gcc-8.2.0/:/opt/gcc-8.2.0/:rw'
+      - './ubuntu1604/home/:/home/:rw'
+      - './ubuntu1604/opt/gcc-8.2.0/:/opt/gcc-8.2.0/:rw'
       - '../scripts/:/opt/gcc-8.2.0/workspace/scripts/:rw'
       - '../archives/:/opt/gcc-8.2.0/workspace/archives/:rw'

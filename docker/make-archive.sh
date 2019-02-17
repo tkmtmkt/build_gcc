@@ -4,7 +4,7 @@ SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 TARGET=gcc-8.2.0
 
 case "$1" in
-  centos6|ubuntu1404)
+  centos6|ubuntu1604)
     BASE_NAME=${TARGET}-$1
     PARENT_DIR=${SCRIPT_DIR}/$1/opt
 
@@ -14,7 +14,7 @@ case "$1" in
         ${TARGET}
     ;;
   *)
-    echo "Usage: $0 [centos6|ubuntu1404]"
+    echo "Usage: $0 [centos6|ubuntu1604]"
     exit 1
     ;;
 esac
