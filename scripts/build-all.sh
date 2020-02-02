@@ -31,9 +31,5 @@ do
       ;;
   esac
 done <<'EOS'
-gmp
-mpfr
-mpc
-isl
 gcc
 EOS

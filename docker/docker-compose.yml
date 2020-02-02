@@ -7,9 +7,9 @@ services:
     tty: true
     volumes:
       - './centos6/home/:/home/:rw'
-      - './centos6/opt/gcc-8.2.0/:/opt/gcc-8.2.0/:rw'
-      - '../scripts/:/opt/gcc-8.2.0/workspace/scripts/:rw'
-      - '../archives/:/opt/gcc-8.2.0/workspace/archives/:rw'
+      - './centos6/opt/gcc-8.3.0/:/opt/gcc-8.3.0/:rw'
+      - '../scripts/:/opt/gcc-8.3.0/workspace/scripts/:rw'
+      - '../archives/:/opt/gcc-8.3.0/workspace/archives/:rw'
   ubuntu1604:
     image: ubuntu_gcc:16.04
     build: ./ubuntu1604
@@ -17,6 +17,6 @@ services:
     tty: true
     volumes:
       - './ubuntu1604/home/:/home/:rw'
-      - './ubuntu1604/opt/gcc-8.2.0/:/opt/gcc-8.2.0/:rw'
-      - '../scripts/:/opt/gcc-8.2.0/workspace/scripts/:rw'
-      - '../archives/:/opt/gcc-8.2.0/workspace/archives/:rw'
+      - './ubuntu1604/opt/gcc-8.3.0/:/opt/gcc-8.3.0/:rw'
+      - '../scripts/:/opt/gcc-8.3.0/workspace/scripts/:rw'
+      - '../archives/:/opt/gcc-8.3.0/workspace/archives/:rw'
