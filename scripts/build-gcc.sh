@@ -18,18 +18,15 @@ pushd ${BUILD_DIR}
 tar xf ${ARCHIVE}
 cd ${TARGET}
 
-while read DEP
+for ITEM in $(awk '/^(gmp|mpfr|mpc|isl)=/{print}' contrib/download_prerequisites | sed 's/'\''//g')
 do
-  ARCHIVE=${ARCHIVES_DIR}/${DEP}
-  [[ ! -s ${ARCHIVE} ]] && curl -ksSL ftp://gcc.gnu.org/pub/gcc/infrastructure/${DEP} ${ARCHIVE}
+  NAME=${ITEM%%=*}
+  FILE=${ITEM##*=}
+  ARCHIVE=${ARCHIVES_DIR}/${FILE}
+  [[ ! -s ${ARCHIVE} ]] && curl -ksSL ftp://gcc.gnu.org/pub/gcc/infrastructure/${FILE} ${ARCHIVE}
   tar xf ${ARCHIVE}
-  ln -s ${DEP%%.tar.*} ${DEP%%-*}
-done <<'EOS'
-gmp-6.1.0.tar.bz2
-mpfr-3.1.4.tar.bz2
-mpc-1.0.3.tar.gz
-isl-0.18.tar.bz2
-EOS
+  ln -s ${FILE%%.tar.*} ${NAME}
+done
 
 # build
 mkdir build
